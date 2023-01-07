@@ -6,7 +6,7 @@ ENV PA_SERVER_PASSWORD=$password
 
 ADD https://altd.embarcadero.com/releases/studio/22.0/112/LinuxPAServer22.0.tar.gz ./paserver.tar.gz
 
-COPY paserver_docker.sh /paserver_docker.sh
+COPY paserver_docker.sh ./paserver_docker.sh
 
 RUN tar xvzf paserver.tar.gz
 
@@ -26,5 +26,6 @@ RUN apt-get update && \
 RUN chmod +x paserver_docker.sh
 
 EXPOSE 64211
+EXPOSE 8082
 
-CMD /paserver_docker.sh
+CMD ./paserver_docker.sh
