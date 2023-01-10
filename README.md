@@ -1,7 +1,7 @@
 # paserver-docker
 Docker script for RAD Studio Linux deployment via PAServer 
 
-- [Container available on Docker Hub](https://hub.docker.com/r/radstudio/paserver)
+- [Container available on Docker Hub](https://hub.docker.com/r/radstudio/pa-radserver)
 - [PAServer Documentation](http://docwiki.embarcadero.com/RADStudio/en/PAServer,_the_Platform_Assistant_Server_Application)
 - [More information on RAD Studio](https://www.embarcadero.com/products/rad-studio)
 
@@ -11,7 +11,7 @@ The 10.x images use Ubuntu 18.04.6 LTS (Bionic Beaver) while the 11.x images use
 
 ## Instructions
 
-If you want to modify or build from GitHub without using [Docker Hub](https://hub.docker.com/r/radstudio/paserver), you can build the Dockerfile with the `build.sh` script. Note: The Dockerfile requires the `paserver_docker.sh` script in the same directory
+If you want to modify or build from GitHub without using [Docker Hub](https://hub.docker.com/r/radstudio/pa-radserver), you can build the Dockerfile with the `build.sh` script. **Note:** The Dockerfile requires the `paserver_docker.sh` script in the same directory
 ```
 ./build.sh
 ```
