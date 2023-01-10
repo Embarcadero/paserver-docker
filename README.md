@@ -1,11 +1,13 @@
 # paserver-docker
-Docker script for RAD Studio Linux deployment via PAServer. 
+Docker script for RAD Studio Linux deployment via PAServer 
 
 - [Container available on Docker Hub](https://hub.docker.com/r/radstudio/paserver)
 - [PAServer Documentation](http://docwiki.embarcadero.com/RADStudio/en/PAServer,_the_Platform_Assistant_Server_Application)
 - [More information on RAD Studio](https://www.embarcadero.com/products/rad-studio)
 
+The image defaults to running PAServer on port `64211` with the password `securepass`, and Broadwayd on port `8082`
 
+The 10.x images use Ubuntu 18.04.6 LTS (Bionic Beaver) while the 11.x images use Ubuntu 22.04.1 LTS (Jammy Jellyfish)
 
 ## Instructions
 
