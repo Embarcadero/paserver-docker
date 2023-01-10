@@ -5,14 +5,16 @@ Docker script for RAD Studio Linux deployment via PAServer.
 - [PAServer Documentation](http://docwiki.embarcadero.com/RADStudio/en/PAServer,_the_Platform_Assistant_Server_Application)
 - [More information on RAD Studio](https://www.embarcadero.com/products/rad-studio)
 
+
+
 ## Instructions
 
-To build using the Dockerfile use the `build.sh` script. Note: The Dockerfile requires the `paserver_docker.sh` script in the same directory
+If you want to modify or build from GitHub without using [Docker Hub](https://hub.docker.com/r/radstudio/paserver), you can build the Dockerfile with the `build.sh` script. Note: The Dockerfile requires the `paserver_docker.sh` script in the same directory
 ```
 ./build.sh
 ```
 
-To pull and run the Docker Hub version of paserver docker for a non-production environment use the `pull-run.sh` script
+To pull and run the [Docker Hub](https://hub.docker.com/r/radstudio/paserver) version of paserver docker for a non-production environment use the `pull-run.sh` script
 ```
 ./pull-run.sh
 ```
