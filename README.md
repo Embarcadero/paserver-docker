@@ -1,7 +1,7 @@
 # paserver-docker
 Docker script for RAD Studio Linux deployment via PAServer 
 
-- [Container available on Docker Hub](https://hub.docker.com/r/radstudio/pa-radserver)
+- *Container available on [Docker Hub](https://hub.docker.com/r/radstudio/pa-radserver)*
 - [PAServer Documentation](http://docwiki.embarcadero.com/RADStudio/en/PAServer,_the_Platform_Assistant_Server_Application)
 - [More information on RAD Studio](https://www.embarcadero.com/products/rad-studio)
 - Other containers: [RAD Server](https://github.com/Embarcadero/pa-radserver-docker), and [RAD Server with InterBase](https://github.com/Embarcadero/pa-radserver-ib-docker)
@@ -17,22 +17,22 @@ If you want to modify or build from GitHub without using [Docker Hub](https://hu
 ./build.sh
 ```
 
-To pull and run the [Docker Hub](https://hub.docker.com/r/radstudio/paserver) version of paserver docker for a non-production environment use the `pull-run.sh` script
+To pull and run the [Docker Hub](https://hub.docker.com/r/radstudio/paserver) version of PAServer Docker for a debug/non-production environment use the `pull-run.sh` script
 ```
 ./pull-run.sh
 ```
 
-To pull and run the Docker Hub version of paserver docker for a production environment use the `pull-run-production.sh` script
+To pull and run the Docker Hub version of PAServer Docker for a non-debug/production environment use the `pull-run-production.sh` script
 ```
 ./pull-run-production.sh securepass123
 ```
 
-To run the Docker Hub version of paserver docker for a non-production environment use the `pull-run.sh` script
+To run the Docker Hub version of PAServer Docker for a debug/non-production environment use the `pull-run.sh` script
 ```
 ./run.sh
 ```
 
-To run the Docker Hub version of paserver docker for a production environment use the `run-production.sh` script
+To run the Docker Hub version of paserver docker for a non-debug/production environment use the `run-production.sh` script
 ```
 ./run-production.sh securepass123
 ```
