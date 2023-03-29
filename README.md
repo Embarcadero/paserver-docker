@@ -1,5 +1,5 @@
 # paserver-docker
-<a href="https://www.embarcadero.com/products/rad-server"><img alt="Embarcadero RAD Server" src="https://user-images.githubusercontent.com/821930/228645955-70692390-f3e0-4f15-937e-7935725b3684.png" align="right"></a>
+<a href="https://www.embarcadero.com/products/rad-studio"><img alt="Embarcadero RAD Studio" src="https://user-images.githubusercontent.com/821930/228646830-41d2a8bf-e528-4e8d-ba55-51071d523087.png" align="right"></a>
 Docker script for RAD Studio Linux deployment via PAServer 
 
 - **Container available on [Docker Hub](https://hub.docker.com/r/radstudio/pa-radserver)**
