@@ -21,6 +21,8 @@ ADD https://altd.embarcadero.com/releases/studio/22.0/113/LinuxPAServer22.0.tar.
 
 RUN tar xvzf paserver.tar.gz
 RUN mv PAServer-22.0/* .
+RUN rm PAServer-22.0 -r
+RUN rm paserver.tar.gz
 
 # link to installed libpython3.10
 RUN mv lldb/lib/libpython3.so lldb/lib/libpython3.so_

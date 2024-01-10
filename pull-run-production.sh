@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ "$1" == '' ]; then
+if [ "$1" = '' ]; then
     echo "RAD Server Docker paserver Pull-Run Script";
     echo "Required arguments: PAServer password";
     echo "ex: pull-run-production.sh securepass";
 else
-    docker pull radstudio/paserver:latest
+    docker pull radstudio/paserver:11.3
 
     bash ./run-production.sh $1
 fi
