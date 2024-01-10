@@ -1,4 +1,4 @@
-This software is Copyright &copy; 2023 by [Embarcadero Technologies, Inc.](https://www.embarcadero.com/)
+This software is Copyright &copy; 2024 by [Embarcadero Technologies, Inc.](https://www.embarcadero.com/)
 
 _You may only use this software if you are an authorized licensee of an Embarcadero developer tools product. See the latest [software license agreement](https://www.embarcadero.com/products/rad-studio/rad-studio-eula) for any updates._
 
