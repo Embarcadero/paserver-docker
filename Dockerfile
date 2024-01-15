@@ -17,10 +17,12 @@ RUN apt-get update && \
     xorg
 
 ### Install PAServer
-ADD https://altd.embarcadero.com/releases/studio/22.0/113/LinuxPAServer22.0.tar.gz ./paserver.tar.gz
+ADD https://altd.embarcadero.com/releases/studio/23.0/120/LinuxPAServer23.0.tar.gz ./paserver.tar.gz
 
 RUN tar xvzf paserver.tar.gz
-RUN mv PAServer-22.0/* .
+RUN mv PAServer-23.0/* .
+RUN rm PAServer-23.0 -r
+RUN rm paserver.tar.gz
 
 # link to installed libpython3.10
 RUN mv lldb/lib/libpython3.so lldb/lib/libpython3.so_

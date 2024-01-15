@@ -2,5 +2,5 @@
 
 docker build . --build-arg password=securepass \
 	--tag=radstudio/paserver:latest \
-	--tag=radstudio/paserver:alexandria \
-	--tag=radstudio/paserver:11.3 \
+	--tag=radstudio/paserver:athens \
+	--tag=radstudio/paserver:12.0 \
