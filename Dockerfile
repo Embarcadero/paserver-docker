@@ -31,11 +31,6 @@ RUN ln -s /lib/x86_64-linux-gnu/libpython3.10.so.1 lldb/lib/libpython3.so
 COPY paserver_docker.sh ./paserver_docker.sh
 RUN chmod +x paserver_docker.sh
 
-#=====CLEAN UP==========
-RUN rm PAServer-22.0 -r
-RUN rm paserver.tar.gz
-#======END CLEAN UP=====
-
 # PAServer
 EXPOSE 64211
 # broadwayd
