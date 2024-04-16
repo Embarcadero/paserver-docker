@@ -5,5 +5,5 @@ if [ "$1" = '' ]; then
     echo "Required arguments: PAServer password";
     echo "ex: run-production.sh securepass";
 else
-    docker run -d -e PA_SERVER_PASSWORD=$1 -p 64211:64211 -p 8082:8082 radstudio/paserver:latest
+    docker run -d -e PA_SERVER_PASSWORD=$1 -p 64211:64211 -p 8082:8082 radstudio/paserver:12.0
 fi
