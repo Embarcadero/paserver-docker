@@ -5,7 +5,7 @@ if [ "$1" = '' ]; then
     echo "Required arguments: PAServer password";
     echo "ex: pull-run-production.sh securepass";
 else
-    docker pull radstudio/paserver:latest
+    docker pull radstudio/paserver:12.0
 
     bash ./run-production.sh $1
 fi
