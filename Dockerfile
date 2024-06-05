@@ -7,9 +7,15 @@ ENV PA_SERVER_PASSWORD=$password
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yy install \
+    joe \
+    wget \
+    p7zip-full \
+    curl \
+    openssh-server \
     build-essential \
-    libcurl4-openssl-dev \
-    libcurl3-gnutls \
+    zlib1g-dev \
+    libcurl4-gnutls-dev \
+    libncurses5 \
     libgl1-mesa-dev \
     libgtk-3-bin \
     libosmesa-dev \
