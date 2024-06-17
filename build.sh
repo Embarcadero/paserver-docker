@@ -5,4 +5,4 @@ docker build . \
         --platform linux/amd64 \
 	--tag=radstudio/paserver:latest \
 	--tag=radstudio/paserver:athens \
-	--tag=radstudio/paserver:12.1 \
+	--tag=radstudio/paserver:12.1.1 \
