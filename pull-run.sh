@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker pull radstudio/paserver:latest
+docker pull radstudio/paserver:12.1
 
 bash ./run.sh
