@@ -23,7 +23,7 @@ RUN apt-get update && \
     xorg
 
 ### Install PAServer
-ADD https://altd.embarcadero.com/releases/studio/23.0/121/LinuxPAServer23.0.tar.gz ./paserver.tar.gz
+ADD https://altd.embarcadero.com/releases/studio/23.0/121/1211/LinuxPAServer23.0.tar.gz ./paserver.tar.gz
 
 RUN tar xvzf paserver.tar.gz
 RUN mv PAServer-23.0/* .
