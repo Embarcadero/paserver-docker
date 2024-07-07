@@ -16,11 +16,7 @@ RUN apt-get update && \
     zlib1g-dev \
     libcurl4-gnutls-dev \
     libncurses5 \
-    libgl1-mesa-dev \
-    libgtk-3-bin \
-    libosmesa-dev \
-    libpython3.10 \
-    xorg
+    libpython3.10
 
 ### Install PAServer
 ADD https://altd.embarcadero.com/releases/studio/23.0/121/1211/LinuxPAServer23.0.tar.gz ./paserver.tar.gz
@@ -39,7 +35,5 @@ RUN chmod +x paserver_docker.sh
 
 # PAServer
 EXPOSE 64211
-# broadwayd
-EXPOSE 8082
 
 CMD ./paserver_docker.sh

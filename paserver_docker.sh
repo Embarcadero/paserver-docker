@@ -1,9 +1,5 @@
 #!/bin/bash
 
-nohup broadwayd :2 &
-export GDK_BACKEND=broadway
-export BROADWAY_DISPLAY=:2
-
 ./paserver -password=$PA_SERVER_PASSWORD
 status=$?
 if [ $status -ne 0 ]; then
