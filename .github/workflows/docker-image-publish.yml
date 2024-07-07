@@ -1,0 +1,31 @@
+name: Docker Image CI - Publish
+
+on:
+  release:
+    types: [published]
+
+  # Manual run
+  workflow_dispatch:
+
+jobs:
+
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Docker Hub Login
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      run: |
+        echo "$DOCKER_TOKEN" | docker login --username $DOCKER_USERNAME --password-stdin       
+    
+    - name: Build the Docker image
+      run: |
+        bash ./build.sh
+
+    - name: Docker Push
+      run: |
+        docker push -a radstudio/paserver
