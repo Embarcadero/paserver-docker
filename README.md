@@ -7,7 +7,7 @@ Docker script for RAD Studio Linux deployment via PAServer
 - [More information on RAD Studio](https://www.embarcadero.com/products/rad-studio)
 - Other containers: [InterBase](https://github.com/Embarcadero/InterBase-Docker) only, [RAD Server](https://github.com/Embarcadero/pa-radserver-docker), and [RAD Server with InterBase](https://github.com/Embarcadero/pa-radserver-ib-docker)
 
-The image defaults to running **PAServer** on port `64211` with the _password_ `securepass`, and **Broadwayd** on port `8082`
+The image defaults to running **PAServer** on port `64211` with the _password_ `securepass`
 
 The 10.x images use Ubuntu 18.04.6 LTS (Bionic Beaver) while the 11.x images use Ubuntu 22.04.1 LTS (Jammy Jellyfish)
 
@@ -28,7 +28,7 @@ To pull and run the Docker Hub version of PAServer Docker for a non-debug/produc
 ./pull-run-production.sh securepass123
 ```
 
-To run the Docker Hub version of PAServer Docker for a debug/non-production environment use the `pull-run.sh` script
+To run the Docker Hub version of PAServer Docker for a debug/non-production environment use the `run.sh` script
 ```
 ./run.sh
 ```
