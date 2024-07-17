@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "$1" = '' ]; then
     echo "RAD Server Docker paserver Run Script";

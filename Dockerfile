@@ -3,37 +3,22 @@ FROM ubuntu:jammy
 
 ARG password=embtdocker
 
+ENV PA_SERVER_URL=https://altd.embarcadero.com/releases/studio/23.0/121/1211/LinuxPAServer23.0.tar.gz
+ENV PA_SERVER_VOLUME=/paserver
+ENV PA_SERVER_VERSION=23.0
 ENV PA_SERVER_PASSWORD=$password
 
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get -yy install \
-    joe \
-    wget \
-    p7zip-full \
-    curl \
-    openssh-server \
-    build-essential \
-    zlib1g-dev \
-    libcurl4-gnutls-dev \
-    libncurses5 \
-    libpython3.10
+VOLUME ["/root/PAServer/scratch-dir"]
 
-### Install PAServer
-ADD https://altd.embarcadero.com/releases/studio/23.0/121/1211/LinuxPAServer23.0.tar.gz ./paserver.tar.gz
+COPY install.sh ./install.sh
 
-RUN tar xvzf paserver.tar.gz
-RUN mv PAServer-23.0/* .
-RUN rm PAServer-23.0 -r
-RUN rm paserver.tar.gz
-
-# link to installed libpython3.10
-RUN mv lldb/lib/libpython3.so lldb/lib/libpython3.so_
-RUN ln -s /lib/x86_64-linux-gnu/libpython3.10.so.1 lldb/lib/libpython3.so
+RUN chmod +x ./install.sh && \
+    sync && \
+    ./install.sh && \
+    rm -f ./install.sh
 
 COPY paserver_docker.sh ./paserver_docker.sh
 RUN chmod +x paserver_docker.sh
-
 # PAServer
 EXPOSE 64211
-
-CMD ./paserver_docker.sh
+ENTRYPOINT ["./paserver_docker.sh"]
