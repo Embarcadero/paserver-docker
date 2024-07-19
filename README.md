@@ -50,5 +50,5 @@ This software is Copyright &copy; 2024 by [Embarcadero Technologies, Inc.](https
 
 _You may only use this software if you are an authorized licensee of an Embarcadero developer tools product. See the latest [software license agreement](https://www.embarcadero.com/products/rad-studio/rad-studio-eula) for any updates._
 
-![Embarcadero(Black-100px)](https://user-images.githubusercontent.com/821930/211648635-c0db6930-120c-4456-a7ea-dc7612f01451.png#gh-light-mode-only)
-![Embarcadero(White-100px)](https://user-images.githubusercontent.com/821930/211649057-7f1f1f07-a79f-44d4-8fc1-87c819386ec6.png#gh-dark-mode-only)
+![Embarcadero(Black-100px)](https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/embt-logo-black.png#gh-light-mode-only)
+![Embarcadero(White-100px)](https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/embt-logo-white.png#gh-dark-mode-only)
