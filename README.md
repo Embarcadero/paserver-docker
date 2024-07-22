@@ -1,7 +1,6 @@
 # RAD Studio PAServer Docker
 
 <a href="https://www.embarcadero.com/products/rad-studio"><img alt="Embarcadero RAD Studio" src="https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/rad-studio-logo.png" align="right"></a>
-Docker script for RAD Studio Linux deployment via PAServer
 
 Welcome to the guide for deploying RAD Studio applications on Linux using Docker and PAServer. This repository offers a Docker script designed to simplify the setup and management of your development environment, allowing RAD Studio developers to deploy and test their applications in a Linux environment.
 
