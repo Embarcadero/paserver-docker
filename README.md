@@ -2,7 +2,6 @@
 
 <a href="https://www.embarcadero.com/products/rad-studio"><img alt="Embarcadero RAD Studio" src="https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/rad-studio-logo.png" align="right"></a>
 Docker script for RAD Studio Linux deployment via PAServer
-<a href="https://www.embarcadero.com/products/rad-studio"><img alt="Embarcadero RAD Studio" src="https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/rad-studio-logo.png" align="right"></a>
 
 Welcome to the guide for deploying RAD Studio applications on Linux using Docker and PAServer. This repository offers a Docker script designed to simplify the setup and management of your development environment, allowing RAD Studio developers to deploy and test their applications in a Linux environment.
 
@@ -241,8 +240,6 @@ This software is Copyright &copy; 2024 by [Embarcadero Technologies, Inc.][embar
 
 _You may only use this software if you are an authorized licensee of an Embarcadero developer tools product. See the latest [software license agreement][embarcadero-license] for any updates._
 
-![Embarcadero(Black-100px)](https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/embt-logo-black.png#gh-light-mode-only)
-![Embarcadero(White-100px)](https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/embt-logo-white.png#gh-dark-mode-only)
 ![Embarcadero(Black)](https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/embt-logo-black.png#gh-light-mode-only)
 ![Embarcadero(White)](https://raw.githubusercontent.com/azapater/paserver-docker/main/.github/images/embt-logo-white.png#gh-dark-mode-only)
 
