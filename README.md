@@ -48,6 +48,7 @@ Navigate to the directory containing [`run.sh`] in your terminal. Execute the sc
 - `--production` or `-pr`: Enable production mode (`true`).
 - `--version` or `-v`: PAServer version (e.g., `--version=latest`).
 - `--password` or `-pw`: Set a password for PAServer (e.g., `--password=securepass`).
+- `--help` or `-h`: Shows the help of the script.
 
 ### 🌈 Examples
 
@@ -235,7 +236,7 @@ docker build --build-arg password=mypassword -t my-custom-paserver:latest .
 
 ## License and Copyright
 
-This software is Copyright &copy; 2024 by [Embarcadero Technologies, Inc.][embarcacero]
+This software is Copyright &copy; 2024 by [Embarcadero Technologies, Inc.][embarcadero]
 
 _You may only use this software if you are an authorized licensee of an Embarcadero developer tools product. See the latest [software license agreement][embarcadero-license] for any updates._
 
