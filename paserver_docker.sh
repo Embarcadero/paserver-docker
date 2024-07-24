@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ./paserver -password=$PA_SERVER_PASSWORD
 status=$?
