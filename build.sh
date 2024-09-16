@@ -7,7 +7,7 @@ set -e
 IMAGE_NAME="radstudio/paserver"
 TAG_LATEST="latest"
 TAG_VERSION="athens"
-TAG_NUMERIC="12.1.1"
+TAG_NUMERIC="12.2"
 
 # Build the Docker image with the first tag
 docker build . \
