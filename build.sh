@@ -5,7 +5,6 @@ set -e
 
 # Variables for image name and tags
 IMAGE_NAME="radstudio/paserver"
-TAG_LATEST="latest"
 TAG_VERSION="athens"
 TAG_NUMERIC="12.2.1"
 
@@ -14,11 +13,10 @@ docker build . \
         --build-arg password=securepass \
         --platform linux/amd64 \
 		--pull \
-		-t ${IMAGE_NAME}:${TAG_LATEST} \
+		-t ${IMAGE_NAME}:${TAG_NUMERIC} \
 
 # Tag the built image with additional version tags
-docker tag "${IMAGE_NAME}:${TAG_LATEST}" "${IMAGE_NAME}:${TAG_VERSION}"
-docker tag "${IMAGE_NAME}:${TAG_LATEST}" "${IMAGE_NAME}:${TAG_NUMERIC}"
+docker tag "${IMAGE_NAME}:${TAG_NUMERIC}" "${IMAGE_NAME}:${TAG_VERSION}"
 
 # Echo a success message
-echo "Docker image ${IMAGE_NAME} tagged with ${TAG_LATEST}, ${TAG_VERSION}, and ${TAG_NUMERIC}"
+echo "Docker image ${IMAGE_NAME} tagged with ${TAG_VERSION}, and ${TAG_NUMERIC}"

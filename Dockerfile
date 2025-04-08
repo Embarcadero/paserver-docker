@@ -1,5 +1,5 @@
 # Build Stage
-FROM ubuntu:jammy as builder
+FROM ubuntu:jammy AS builder
 
 ARG password=securepass
 
