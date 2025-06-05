@@ -2,7 +2,7 @@
 
 NAME="paserver"
 BIND_PATH=""
-VERSION="latest"
+VERSION="12.3"
 PRODUCTION=false
 PORT="64211"
 DETACH=false
