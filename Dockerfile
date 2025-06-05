@@ -4,7 +4,7 @@ FROM ubuntu:jammy AS builder
 ARG password=securepass
 
 ENV PA_SERVER_PASSWORD=$password
-ENV PA_SERVER_URL=https://altd.embarcadero.com/releases/studio/23.0/123/LinuxPAServer23.0.tar.gz
+ENV PA_SERVER_URL=https://altd.embarcadero.com/releases/studio/23.0/123/123May/LinuxPAServer23.0.tar.gz
 ENV PA_SERVER_VERSION=23.0
 
 # Install build dependencies
