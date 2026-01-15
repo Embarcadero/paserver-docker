@@ -6,8 +6,8 @@ set -e
 # Variables for image name and tags
 IMAGE_NAME="radstudio/paserver"
 TAG_LATEST="latest"
-TAG_VERSION="athens"
-TAG_NUMERIC="12.3.2"
+TAG_VERSION="florence"
+TAG_NUMERIC="13.0"
 
 # Build the Docker image with the first tag
 docker build . \
