@@ -2,8 +2,8 @@ This software is Copyright &copy; 2024 by [Embarcadero Technologies, Inc.](https
 
 _You may only use this software if you are an authorized licensee of an Embarcadero developer tools product. See the latest [software license agreement](https://www.embarcadero.com/products/rad-studio/rad-studio-eula) for any updates._
 
-![Embarcadero(Black-100px)](https://user-images.githubusercontent.com/821930/211648635-c0db6930-120c-4456-a7ea-dc7612f01451.png#gh-light-mode-only)
-![Embarcadero(White-100px)](https://user-images.githubusercontent.com/821930/211649057-7f1f1f07-a79f-44d4-8fc1-87c819386ec6.png#gh-dark-mode-only)
+![Embarcadero](.github/images/embt-logo-black.png#gh-light-mode-only)
+![Embarcadero](.github/images/embt-logo-white.png#gh-dark-mode-only)
 ## Software License and Support Agreement
 
 **1. SCOPE.** This Software License and Support Agreement ("Agreement") is a legal agreement between you (either an individual or an entity ("you" or "Licensee")) and Embarcadero Technologies, Inc., a Delaware corporation with offices at 10801 N Mopac Expressway, Building 1, Suite 100, Austin, Texas 78759, including its affiliates ("Licensor"). By downloading or unsealing Licensor's software and/or documentation ("Products"), Licensee is agreeing to be bound by the terms of this Agreement. In the event of a conflict between the terms of this Agreement and any ordering document, the terms of this Agreement will govern and control. Delivery if made by any means other than electronic delivery, shall be made FCA (Incoterms 2010) Licensor's shipping point. If Licensee is evaluating Licensor software, only the provisions of Section 22 below will govern such evaluation.

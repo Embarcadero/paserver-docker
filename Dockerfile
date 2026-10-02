@@ -1,23 +1,27 @@
 # Build Stage
 FROM ubuntu:jammy AS builder
 
-ARG password=securepass
-
-ENV PA_SERVER_PASSWORD=$password
-ENV PA_SERVER_URL=https://altd.embarcadero.com/releases/studio/37.0/130/LinuxPAServer37.0.tar.gz
-ENV PA_SERVER_VERSION=37.0
+ARG PA_SERVER_SOURCE=remote
+ARG PA_SERVER_URL=https://altd.embarcadero.com/releases/studio/37.0/132/LinuxPAServer37.0.tar.gz
+ARG PA_SERVER_TARBALL=LinuxPAServer37.0.tar.gz
 
 # Install build dependencies
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yy --no-install-recommends \
     curl \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Download and extract PAServer
-RUN curl -L "${PA_SERVER_URL}" -k -o ./paserver.tar.gz \
-    && tar xvzf paserver.tar.gz \
-    && mkdir /paserver \
-    && mv PAServer-${PA_SERVER_VERSION}/* /paserver \
-    && rm -rf PAServer-${PA_SERVER_VERSION} paserver.tar.gz
+COPY bin/ /tmp/bin/
+
+# Download or copy and extract PAServer
+RUN mkdir /paserver \
+    && if [ "$PA_SERVER_SOURCE" = "local" ]; then \
+         cp "/tmp/bin/${PA_SERVER_TARBALL}" paserver.tar.gz; \
+       else \
+         curl -fL "${PA_SERVER_URL}" -o paserver.tar.gz; \
+       fi \
+    && tar xzf paserver.tar.gz --strip-components=1 -C /paserver \
+    && rm -rf paserver.tar.gz /tmp/bin
 
 # Runtime Stage
 FROM ubuntu:jammy
@@ -39,6 +43,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yy --no-in
 COPY --from=builder /paserver /paserver
 COPY paserver_docker.sh /paserver/paserver_docker.sh
 
+# Default password. Override at runtime with -e PA_SERVER_PASSWORD=...
+ENV PA_SERVER_PASSWORD=securepass
+
 # Set work directory
 WORKDIR /paserver
 
@@ -49,6 +56,10 @@ RUN mv lldb/lib/libpython3.so lldb/lib/libpython3.so_ \
 
 # Expose PAServer's default port
 EXPOSE 64211
+
+# Verify PAServer is accepting connections on its default port
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+    CMD bash -c 'echo > /dev/tcp/127.0.0.1/64211' || exit 1
 
 # Get ready to bind to PAServer's default scratch dir
 VOLUME ["/root/PAServer/scratch-dir"]
