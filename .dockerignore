@@ -1,0 +1,9 @@
+# Keep the build context small. bin/ and paserver_docker.sh are required by the Dockerfile.
+.git
+.gitattributes
+.github
+README.md
+LICENSE.md
+build.sh
+run.sh
+*.md

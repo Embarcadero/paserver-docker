@@ -61,31 +61,33 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-if [ "$BIND_PATH" != "" ]; then
-    BIND_PATH_ARG="--mount type=bind,source=$BIND_PATH,target=/root/PAServer/scratch-dir"
+if [ "$PRODUCTION" = false ]; then
+    printf "Password: %s\n" "$PASSWORD"
+    printf "Port: %s\n" "$PORT"
+    printf "Detach: %s\n" "$DETACH"
+    printf "Production: %s\n" "$PRODUCTION"
+    printf "Path: %s\n" "$BIND_PATH"
+    printf "Name: %s\n" "$NAME"
+    printf "Version: %s\n" "$VERSION"
+fi
+
+args=()
+if [ "$PRODUCTION" = false ]; then
+    args+=(--cap-add=SYS_PTRACE --security-opt seccomp=unconfined)
 fi
 
 if [ "$DETACH" = true ]; then
-    DETACH_ARG="-d -t"
+    args+=(-d -t)
 else
-    DETACH_ARG="-it"
+    args+=(-it)
 fi
 
-if [ "$PRODUCTION" = false ]; then
-    printf "Password: $PASSWORD\n"
-    printf "Port: $PORT\n"
-    printf "Detach: $DETACH\n"
-    printf "Production: $PRODUCTION\n"
-    printf "Path: $BIND_PATH\n"
-    printf "Name: $NAME\n"
-    printf "Version: $VERSION\n"
+args+=(-e "PA_SERVER_PASSWORD=${PASSWORD}")
 
-    DEBUG_ARG="--cap-add=SYS_PTRACE --security-opt seccomp=unconfined"
+if [ -n "$BIND_PATH" ]; then
+    args+=(--mount "type=bind,source=${BIND_PATH},target=/root/PAServer/scratch-dir")
 fi
 
-docker run $DEBUG_ARG \
-           $DETACH_ARG \
-           -e PA_SERVER_PASSWORD=$PASSWORD \
-           $BIND_PATH_ARG \
-           --name $NAME \
-           -p $PORT:64211 radstudio/paserver:$VERSION
+args+=(--name "$NAME" -p "${PORT}:64211" "radstudio/paserver:${VERSION}")
+
+docker run "${args[@]}"

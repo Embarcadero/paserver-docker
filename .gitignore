@@ -1,0 +1,3 @@
+# Local PAServer archives used by `./build.sh beta`. Do not commit licensed installers.
+bin/*
+!bin/.gitkeep
